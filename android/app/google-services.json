@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "130494177003",
+    "project_id": "decode-6d85c",
+    "storage_bucket": "decode-6d85c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130494177003:android:9bf0f90d0bb13f83dae8ae",
+        "android_client_info": {
+          "package_name": "pk.intellilogics.week6_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACxlGlrwqzI1pOsFgWBknIIlfkjlZSOaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
