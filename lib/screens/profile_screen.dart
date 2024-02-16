@@ -8,6 +8,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:week6_firebase/screens/login_screen.dart';
 import 'package:week6_firebase/utility/utility.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -146,6 +147,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 const Gap(20),
                 Text('Member Since: ${Utility.getHumanReadableDate(userSnapshot!['createdOn'])}',
                     textAlign: TextAlign.center),
+                const Gap(20),
+
+                ElevatedButton(onPressed: () async {
+
+                  await FirebaseAuth.instance.currentUser!.delete();
+
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context){
+                    return const LoginScreen();
+                  }));
+
+                }, child: const Text('Delete Account')),
               ],
             ),
     );
