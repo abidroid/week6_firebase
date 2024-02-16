@@ -7,6 +7,7 @@ import 'package:gap/gap.dart';
 import 'package:week6_firebase/screens/add_task_screen.dart';
 import 'package:week6_firebase/screens/login_screen.dart';
 import 'package:week6_firebase/screens/profile_screen.dart';
+import 'package:week6_firebase/screens/update_task_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -178,7 +179,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
                                     color: Colors.red,
                                   )),
                               IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+
+                                    Navigator.of(context).push(MaterialPageRoute(builder: (context){
+
+                                      return UpdateTaskScreen(taskSnapshot: tasksList[index]);
+                                    }));
+
+                                  },
                                   icon: const Icon(
                                     Icons.edit,
                                     size: 40,
