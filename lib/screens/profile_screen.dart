@@ -8,6 +8,7 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:week6_firebase/utility/utility.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -143,7 +144,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Text('Mobile: ${userSnapshot!['mobile']}',
                     textAlign: TextAlign.center),
                 const Gap(20),
-                Text('Member Since: ${userSnapshot!['createdOn']}',
+                Text('Member Since: ${Utility.getHumanReadableDate(userSnapshot!['createdOn'])}',
                     textAlign: TextAlign.center),
               ],
             ),

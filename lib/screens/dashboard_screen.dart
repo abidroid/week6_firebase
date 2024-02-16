@@ -8,6 +8,7 @@ import 'package:week6_firebase/screens/add_task_screen.dart';
 import 'package:week6_firebase/screens/login_screen.dart';
 import 'package:week6_firebase/screens/profile_screen.dart';
 import 'package:week6_firebase/screens/update_task_screen.dart';
+import 'package:week6_firebase/utility/utility.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -128,7 +129,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           style: const TextStyle(color: Colors.white),
                         ),
                         subtitle: Text(
-                          tasksList[index]['taskId'],
+                          Utility.getHumanReadableDate(tasksList[index]['createdOn']),
                           style: const TextStyle(color: Colors.white),
                         ),
                         trailing: SizedBox(
