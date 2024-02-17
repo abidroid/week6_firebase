@@ -4,6 +4,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gap/gap.dart';
 import 'package:week6_firebase/screens/dashboard_screen.dart';
 import 'package:week6_firebase/screens/email_verification_screen.dart';
+import 'package:week6_firebase/screens/forgot_password_screen.dart';
 import 'package:week6_firebase/screens/register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -53,7 +54,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   hintText: 'Password', border: OutlineInputBorder()),
             ),
 
-            const Gap(16),
+
+            Align(
+                alignment: Alignment.bottomRight,
+                child: TextButton(onPressed: (){
+
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                    return const ForgotPasswordScreen();
+                  }));
+                }, child: const Text('Forgot Password?'))),
+            
+
 
             ElevatedButton(onPressed: () async {
 
